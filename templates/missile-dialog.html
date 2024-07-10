@@ -1,0 +1,23 @@
+<form id="missileForm" class="flexcol" autocomplete="off" novalidate>
+    <section class="content">
+        <p>左键点击一个token来将其设置为目标</p>
+        <p>右键点击一个token来移除目标</p>
+        <p>分配目标 <b><input style='width: 2em;' type="number"
+                    class="txtNumMissiles" id="txtNumMissilesId" readonly value="{{numMissiles}}"></input></b>
+            个目标
+        </p>
+        <table id="targetsTable" width="100%">
+            <tbody>
+                <tr>
+                    <th>目标</th>
+                    <th>次数</th>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <footer class="sheet-footer flexrow">
+        <button id="submitButton" type="submit" name="submit">
+            <i class="fa fa-check-square"></i> 确定
+        </button>
+    </footer>
+</form>

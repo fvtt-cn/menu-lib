@@ -1,0 +1,44 @@
+<form id="multiChooseForm" class="flexcol" autocomplete="off" novalidate>
+    <section class="content">
+        <div style="width: 100%;">
+            <span style="width: 50%;"><b>剩余： </b></span>
+            <b><input style="width: auto;" type="number" class="txtNum" id="txtNumId" readonly value="{{data.num}}"></input></b>
+        </div>
+        <div>{{content}}</div>
+        <table id="optionsTable" width="100%">
+            <colgroup>
+                <col style="width: 42%;">
+                <col style="width: 7%;">
+                <col style="width: 30%;">
+                <col style="width: 7%;">
+                <col style="width: 7%;">
+                <col style="width: 7%;">
+            </colgroup>
+            <tbody>
+                <tr>
+                    <th>选项</th>
+                    <th>消耗</th>
+                    <th>前置</th>
+                    <th></th>
+                    <th>次数</th>
+                    <th></th>
+                </tr>
+                {{#each data.options as |option|}}
+                <tr class="option" style="text-align: center;">
+                    <td><div data-tooltip="{{option.description}}">{{option.label}}</div></td>
+                    <td><input style='width: 2em;margin:auto;' type="number" readonly value="{{option.cost}}"></input></td>
+                    <td>{{option.requirement}}</td>
+                    <td><button class="btnPlusNum" type="button" data-id="{{option.name}}" {{#if option.disabled}}disabled{{/if}}><i class="fas fa-plus"></i></button></td>
+                    <td><input style='width: 2em;margin:auto;' type="number" readonly value="{{option.num}}"></input></td>
+                    <td><button class="btnMinusNum" type="button" data-id="{{option.name}}" {{#if option.disabled}}disabled{{/if}}><i class="fas fa-minus"></i></button></td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </section>
+    <footer class="sheet-footer flexrow">
+        <button id="submitButton" type="submit" name="submit">
+            <i class="fa fa-check-square"></i> 确定
+        </button>
+    </footer>
+</form>
