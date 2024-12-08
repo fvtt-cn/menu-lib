@@ -145,7 +145,7 @@ export default class menulib {
     }
     if (typeof options[0] != 'string' && option.path) {
       if (typeof option.path == 'string') {
-        keys = option.path.split('.');
+        let keys = option.path.split('.');
         keys.forEach(key => {
           options = options.map(o => o[key]);
         })

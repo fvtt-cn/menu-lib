@@ -2,7 +2,7 @@
   "name": "menu-lib",
   "title": "Menu Lib",
   "description": "提供一些简单易用的自定义界面功能。",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "EternalRider",
   "dependencies": [
     {
@@ -21,13 +21,10 @@
     "./scripts/init.js"
   ],
   "scripts": [],
-  "styles": [
-    "./styles/module.css"
-  ],
   "packs": [],
   "url": "https://github.com/fvtt-cn/menu-lib",
   "minimumCoreVersion": "11",
   "compatibleCoreVersion": "12",
-  "manifest": "https://github.com/fvtt-cn/menu-lib/releases/download/0.1.0/module.json",
-  "download": "https://github.com/fvtt-cn/menu-lib/releases/download/0.1.0/menu-lib.zip"
+  "manifest": "https://github.com/fvtt-cn/menu-lib/releases/download/0.1.1/module.json",
+  "download": "https://github.com/fvtt-cn/menu-lib/releases/download/0.1.1/menu-lib.zip"
 }
